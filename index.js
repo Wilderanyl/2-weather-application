@@ -14,6 +14,7 @@ async function getData() {
   const humidityValue = document.getElementById("humidity");
   const windSpeed = document.getElementById("wind-speed");
   const degreeCelsius = document.getElementById("degree-celsius");
+  const weatherIcon = document.getElementById("weather-icon");
   const weatherData = await fetchData(searchBox.value);
 
   if (weatherData.cod == 404) {
@@ -21,6 +22,7 @@ async function getData() {
     searchResult.innerHTML = weatherData.message;
     degreeCelsius.style.display = "none";
     searchBox.value = "";
+    weatherIcon.src = "/icons/no-data.png";
   } else {
     document.getElementsByClassName("bottom")[0].style.display = "flex";
     degreeCelsius.style.display = "block";
@@ -30,7 +32,19 @@ async function getData() {
     degreeCelsius.innerHTML =
       Math.round(weatherData.main.temp) + `<span>°C</span>`;
     searchBox.value = "";
+    if (weatherData.weather[0].main === "Clouds") {
+      weatherIcon.src = "/icons/clouds.png";
+    } else if (weatherData.weather[0].main === "Clear") {
+      weatherIcon.src = "/icons/clear.png";
+    } else if (weatherData.weather[0].main === "Rain") {
+      weatherIcon.src = "/icons/rain.png";
+    } else if (weatherData.weather[0].main === "Drizzle") {
+      weatherIcon.src = "/icons/drizzle.png";
+    } else if (weatherData.weather[0].main === "Mist") {
+      weatherIcon.src = "/icons/mist.png";
+    } else;
   }
+  console.log(weatherData);
 }
 
 function mainfn() {

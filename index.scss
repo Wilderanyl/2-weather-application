@@ -136,6 +136,9 @@ body {
           .top {
               @include flexCenter;
               flex-direction: column;
+              #weather-icon {
+                width: 300px;
+              }
               #degree-celsius {
                 font-size: 60px;
                 position: relative;

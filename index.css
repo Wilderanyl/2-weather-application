@@ -119,6 +119,9 @@ body .container .project-container .content .weather .top {
   justify-content: center;
   flex-direction: column;
 }
+body .container .project-container .content .weather .top #weather-icon {
+  width: 300px;
+}
 body .container .project-container .content .weather .top #degree-celsius {
   font-size: 60px;
   position: relative;
