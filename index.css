@@ -84,6 +84,80 @@ body .container .project-container .content {
   padding: 10px;
   color: #f0dc4e;
 }
+body .container .project-container .content .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body .container .project-container .content .search input {
+  flex: 1;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+body .container .project-container .content .search button {
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  background-color: #f0dc4e;
+  color: #2e302c;
+  font-weight: bold;
+  cursor: pointer;
+}
+body .container .project-container .content .weather {
+  margin-top: 60px;
+}
+body .container .project-container .content .weather .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .container .project-container .content .weather .top #degree-celsius {
+  font-size: 60px;
+  position: relative;
+}
+body .container .project-container .content .weather .top #degree-celsius span {
+  position: absolute;
+  top: 15px;
+  font-size: 10px;
+}
+body .container .project-container .content .weather .bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .project-container .content .weather .bottom .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .project-container .content .weather .bottom .left img {
+  width: 40px;
+  margin-right: 5px;
+}
+body .container .project-container .content .weather .bottom .left #humidity {
+  font-size: 16px;
+}
+body .container .project-container .content .weather .bottom .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .project-container .content .weather .bottom .right img {
+  width: 40px;
+  margin-right: 5px;
+}
+body .container .project-container .content .weather .bottom .right #wind-speed {
+  font-size: 16px;
+}
 body .footer {
   border-top: 1px solid #2e302c;
   text-align: center;

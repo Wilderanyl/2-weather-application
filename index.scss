@@ -109,6 +109,68 @@ body {
         margin-top: $marginTop * 2;
         padding: 10px;
         color: $bgColorH;
+        .search {
+          @include flexBetween;
+          flex-direction: row;
+          input {
+            flex: 1;
+            font-size: 17px;
+            padding: 10px;
+            border-radius: $raduis;
+            @include borderNoutline;
+          }
+          button {
+            font-size: 17px;
+            padding: 10px;
+            border-radius: $raduis;
+            margin-left: 10px;
+            @include borderNoutline;
+            background-color: $bgColorH;
+            color: $colorH;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+        .weather {
+          margin-top: $marginTop*3;
+          .top {
+              @include flexCenter;
+              flex-direction: column;
+              #degree-celsius {
+                font-size: 60px;
+                position: relative;
+                span {
+                  position: absolute;
+                  top: 15px;
+                  font-size: 10px;
+                }
+              }
+          }
+          .bottom {
+            margin-top: $marginTop;
+            @include flexBetween;
+            .left {
+              @include flexBetween;
+              img {
+                width: 40px;
+                margin-right: 5px;
+              }
+              #humidity {
+                font-size: 16px;
+              }
+            }
+            .right {
+              @include flexBetween;
+              img {
+                width: 40px;
+                margin-right: 5px;
+              }
+              #wind-speed {
+                font-size: 16px;
+              }
+            }
+          }
+        }
       }
     }
   }
