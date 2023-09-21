@@ -57,7 +57,6 @@ body .container .project-container .badge {
   background-color: #f0dc4e;
   padding: 5px 10px;
   border-radius: 4px;
-  box-shadow: 0px 4px 16px #f0dc4e;
 }
 body .container .project-container .badge p {
   color: #2e302c;
